@@ -1,0 +1,20 @@
+<ion-view title={{categoria}}>
+
+  <ion-content padding="true">
+    <!-- Repite como rec, el array listRecetas -->
+    <ion-list ng-repeat="rec in listRecetas" >
+    <!-- cuando cliquemos en el objeto, rediceccionará hacia la receta con dicha categoria, titulo e id -->
+      <a href="#/app/recetas/{{rec.categoria}}/{{rec.titulo}}/{{rec.id}}">
+        <ion-item class="item-thumbnail-left">
+        <!-- Transforma la imagen de base64 en imagen que se pueda mostrar. -->
+          <img ng-src="data:image/png;base64,{{rec.img}}"></img>
+          <h1 class="categoria">{{rec.titulo}}</h1>
+          <p>{{rec.racion}}</p>
+        </ion-item>
+      </a>
+
+    </ion-list>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,44 @@
+.imgResponsive{
+	display: block; 
+	width: 100%; 
+	height: auto; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.spacer {
+	height: 10px;
+}
+
+h1.categoria{
+    font-size: 1.2rem;
+}
+
+.estiloCard{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+.iconInfo {
+    font-size: 0.1 em;
+}
+
+p {
+    text-align: justify;
+}
+
+.item .row, .item .col {
+  padding: 0;
+}
+
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
+}

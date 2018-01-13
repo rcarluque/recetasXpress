@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+  <!-- Llama a la directiva de atributo de menu -->
+  <ion-side-menu-content menu-directive>
+
+  </ion-side-menu-content>
+
+  <!-- Le decimos que la barra será de estilo energized y titulo categorias-->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-energized">
+      <h1 class="title">Categorias</h1>
+    </ion-header-bar>
+
+    <ion-content>
+    
+      <ion-list >
+      <!-- Pestaña home. Volverá a la pantalla principal -->
+        <ion-item menu-close href="#/app/">
+          Home
+        </ion-item>
+
+        <!-- Pestaña categorias, repite el json de portada (El json de portada lo he hecho por el tema de que tener
+        una imagen de portada para las image-card). De este recogemos el titulo y se lo pasamos a href-->
+        <div ng-repeat="port in portada">
+          <ion-item menu-close href="#/app/recetas/{{port.titulo}}">
+            {{port.titulo}}
+          </ion-item>
+        </div>
+
+        <ion-item menu-close href="#/app/about">
+          About
+        </ion-item>
+
+      </ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

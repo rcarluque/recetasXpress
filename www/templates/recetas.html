@@ -1,0 +1,13 @@
+<ion-view title="Recetas Xpress" id="pag-recetas">
+
+  <ion-content padding="true" class="has-header">
+
+  <!-- Llamadas las directivas correspondientes -->
+  	<div ng-repeat="port in portada">
+
+	   <recetas-card titulo={{port.titulo}} img={{port.img}} ></recetas-card>
+
+	</div>
+
+  </ion-content>
+</ion-view>

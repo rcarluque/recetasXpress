@@ -1,0 +1,13 @@
+ <!-- Carta de presentación de carne | con ui-sref redireccionamos a las recetas. -->
+<a class="list card estiloCard" href="#/app/recetas/{{titulo}}">
+  <!-- Titulo de la card -->
+  <ion-item>{{titulo}}</ion-item>
+  <!-- imagen de la card -->
+  <div class="item item-image">
+    <img ng-src="data:image/png;base64,{{img}}" class="imgResponsive">
+  </div>
+  <!-- Icono al lado de texto ver receta -->
+  <ion-item class="item-icon-left"> 
+    <i class="icon ion-fork"></i>Ver Receta
+  </ion-item>
+</a>

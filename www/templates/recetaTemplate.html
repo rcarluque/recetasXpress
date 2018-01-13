@@ -1,0 +1,29 @@
+<ion-view title={{nombre}} cache-view="false" hide-tabs>
+
+  <ion-content padding="true" class="has-header">
+
+      <div class="card" ng-repeat="rec in recByName">
+
+        <div class="item item-divider">
+          <h2><b>{{rec.titulo}}</b></h2>
+        </div>
+        <div class="item item-text-wrap">
+          <img class="imgResponsive" ng-src="data:image/png;base64,{{rec.img}}" />
+        </div>
+        <div class="item item-divider">
+          <p>{{rec.racion}}</p>
+        </div>
+        <div class="item item-text-wrap">
+        <!-- En el array de rec, repite ingredientes como ing -->
+          <p ng-repeat="ing in rec.ingredientes"><b>{{ing.nombre}}:</b> {{ing.cantidad}}</p>
+        </div>
+        <div class="item item-text-wrap">
+          <b>Preparación:</b>
+          <p ng-repeat="prep in rec.preparacion"><b>{{prep.numero}}</b>{{prep.contenido}}</p>
+        </div>
+
+      </div>
+
+  </ion-content>
+
+</ion-view>

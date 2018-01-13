@@ -1,0 +1,26 @@
+<!-- Datos de muestra de la pestaña about-->
+	<h2>{{about.titulo}}</h2>
+	<h4 style="color:#AD0000;">{{about.nombre_empresa}}</h4>
+	<div class="show-list-numbers-and-dots">
+		<p>{{about.descripcion_empresa}}</p>
+	</div>
+
+<!-- Formulario con el que comprobaremos que funciona nuestra expresión regular -->
+<form name="suscribeForm">
+	<h5>Suscribete:</h5>
+    <div class="col">
+    	<div class="item-input-inset">
+			<label class="item-input-wrapper">
+				<input type="text" ng-pattern="regex" ng-model="email" placeholder="Email" required>
+			</label>
+			<!-- El botón se desabilirará cuando el formulario sea invalido. Cuando pulsemos en él llamará al metodo suscribe -->
+			<button class="button button-small" ng-disabled="suscribeForm.$invalid" ng-click="suscribe()">Enviar</button>
+		</div>
+	</div>
+</form>
+
+<!-- Parte del mapa -->
+    <div class="item item-text-wrap">
+		
+    	<div id="map" data-tap-disabled="true"></div>   
+    </div>
